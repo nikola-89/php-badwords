@@ -2,12 +2,9 @@
     // ******************************
     $frase = "Dovresti assumere molta frutta, verdura, e fibra ogni giorno.";
     // ******************************
-    $url = 'https://i.imgur.com/5pTeBdC.gif';
-    $dscr = 'trump gif';
+    $img = ['https://i.imgur.com/5pTeBdC.gif', 'trump gif'];
     // ******************************
 ?>
-
-<!-- http://localhost:8888/php-badwords/index.php?badwords=fibra -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +27,6 @@
             <?php var_dump(str_replace($_GET['badwords'], '***', $frase)); ?>
         </p>
         <br>
-        <img src="<?php echo $url; ?>" alt="<?php $dscr; ?>">
+        <img src="<?php echo $img[0]; ?>" alt="<?php echo $img[1]; ?>">
     </body>
 </html>
