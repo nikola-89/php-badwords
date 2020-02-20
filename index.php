@@ -2,10 +2,6 @@
     // ******************************
     $frase = "Dovresti assumere molta frutta, verdura, e fibra ogni giorno.";
     // ******************************
-    $badwords = $_GET['badwords'];
-    // ******************************
-    $output = str_replace($badwords, '***', $frase);
-    // ******************************
 ?>
 
 <!-- http://localhost:8888/php-badwords/index.php?badwords=fibra -->
@@ -26,7 +22,7 @@
         </p>
         <br>
         <p>
-            <?php echo $output; ?>
+            <?php echo str_replace($_GET['badwords'], '***', $frase); ?>
         </p>
     </body>
 </html>
